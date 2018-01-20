@@ -1,0 +1,16 @@
+n=input()
+myans=""
+prev=0
+for i in range(len(n)):
+    if(n[i]==' '):
+        temp=""
+        
+        for j in range(i-1,prev-1,-1):
+            temp=str(temp)+str(n[j])
+        myans=myans+temp+" "
+        prev=i
+        temp=""
+        for j in range(len(n)-1,prev-1,-1):
+            temp=str(temp)+str(n[j])
+        myans=myans+temp+" "    
+print(myans)    
